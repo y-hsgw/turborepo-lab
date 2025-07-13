@@ -1,0 +1,22 @@
+{
+  "name": "@repo/math",
+  "version": "1.0.0",
+  "description": "",
+  "exports": {
+    "./*": "./dist/*.js"
+  },
+  "private": true,
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "check-types": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@repo/typescript-config": "workspace:*"
+  }
+}

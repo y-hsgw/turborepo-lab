@@ -9,6 +9,10 @@
     "check-types": {
       "dependsOn": ["^check-types"],
       "inputs": ["$TURBO_DEFAULT$", "!README.md"]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

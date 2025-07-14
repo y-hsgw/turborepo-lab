@@ -5,8 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build": "turbo build",
-    "check-types": "turbo check-types"
+    "turbo": "turbo",
+    "dev": "turbo run dev",
+    "build": "turbo run build --summarize",
+    "check-types": "turbo run check-types"
   },
   "repository": {
     "type": "git",

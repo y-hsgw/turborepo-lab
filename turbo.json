@@ -3,10 +3,12 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "build/**", "dist/**"]
+      "outputs": [".next/**", "!.next/cache/**", "build/**", "dist/**"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     },
     "check-types": {
-      "dependsOn": ["^check-types"]
+      "dependsOn": ["^check-types"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     }
   }
 }

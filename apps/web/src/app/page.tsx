@@ -7,6 +7,8 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>{process.env.NEXT_PUBLIC_TITLE}</h1>
+        <h2>アプリ名：{process.env.APP_NAME}</h2>
+        <h2>環境：{process.env.NODE_ENV}</h2>
         <Image
           className={styles.logo}
           src="/next.svg"

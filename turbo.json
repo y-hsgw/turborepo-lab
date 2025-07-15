@@ -4,6 +4,7 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "build/**", "dist/**"],
+      "env": ["APP_NAME", "NODE_ENV"],
       "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     },
     "check-types": {

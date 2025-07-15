@@ -10,6 +10,9 @@
       "dependsOn": ["^check-types"],
       "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
     "dev": {
       "cache": false,
       "persistent": true

@@ -1,0 +1,17 @@
+{
+  "name": "@repo/eslint-config",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "exports": {
+    "./base": "./base.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "eslint-config-turbo": "^2.5.4",
+    "@eslint/js": "^9.31.0"
+  }
+}

@@ -67,6 +67,9 @@ importers:
       '@eslint/eslintrc':
         specifier: ^3
         version: 3.3.1
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../packages/eslint-config
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config
@@ -88,6 +91,15 @@ importers:
       typescript:
         specifier: ^5
         version: 5.6.3
+
+  packages/eslint-config:
+    devDependencies:
+      '@eslint/js':
+        specifier: ^9.31.0
+        version: 9.31.0
+      eslint-config-turbo:
+        specifier: ^2.5.4
+        version: 2.5.4(eslint@9.31.0(jiti@1.21.7))(turbo@2.5.4)
 
   packages/math:
     devDependencies:
@@ -2812,6 +2824,10 @@ packages:
     resolution: {integrity: sha512-tE7ztYzXHIeyvc7N+hR3oi7FIbf/NIjVP9hmAt3yMXzrQ072/fpjGLx2GxNxGxUl5V73MEqYzioOMoVhGMJ5cA==}
     engines: {node: '>=10'}
 
+  dotenv@16.0.3:
+    resolution: {integrity: sha512-7GO6HghkA5fYG9TYnNxi14/7K9f5occMlp3zXAuSxn7CKCxt9xbNWG7yF8hTCSUchlfWSe3uLmlPfigevRItzQ==}
+    engines: {node: '>=12'}
+
   dunder-proto@1.0.1:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
@@ -2943,6 +2959,12 @@ packages:
       typescript:
         optional: true
 
+  eslint-config-turbo@2.5.4:
+    resolution: {integrity: sha512-OpjpDLXIaus0N/Y+pMj17K430xjpd6WTo0xPUESqYZ9BkMngv2n0ZdjktgJTbJVnDmK7gHrXgJAljtdIMcYBIg==}
+    peerDependencies:
+      eslint: '>6.6.0'
+      turbo: '>2.0.0'
+
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
 
@@ -3007,6 +3029,12 @@ packages:
     engines: {node: '>=4'}
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8 || ^9.7
+
+  eslint-plugin-turbo@2.5.4:
+    resolution: {integrity: sha512-IZsW61DFj5mLMMaCJxhh1VE4HvNhfdnHnAaXajgne+LUzdyHk2NvYT0ECSa/1SssArcqgTvV74MrLL68hWLLFw==}
+    peerDependencies:
+      eslint: '>6.6.0'
+      turbo: '>2.0.0'
 
   eslint-scope@5.1.1:
     resolution: {integrity: sha512-2NxwbF/hZ0KpepYN0cNbo+FN6XoK7GaHlQhgx/hIZl6Va0bF45RQOOwhLIy8lQDbuCiadSLCBnH2CFYquit5bw==}
@@ -9644,6 +9672,8 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
+  dotenv@16.0.3: {}
+
   dunder-proto@1.0.1:
     dependencies:
       call-bind-apply-helpers: 1.0.2
@@ -9836,6 +9866,12 @@ snapshots:
       - eslint-plugin-import-x
       - supports-color
 
+  eslint-config-turbo@2.5.4(eslint@9.31.0(jiti@1.21.7))(turbo@2.5.4):
+    dependencies:
+      eslint: 9.31.0(jiti@1.21.7)
+      eslint-plugin-turbo: 2.5.4(eslint@9.31.0(jiti@1.21.7))(turbo@2.5.4)
+      turbo: 2.5.4
+
   eslint-import-resolver-node@0.3.9:
     dependencies:
       debug: 3.2.7
@@ -9943,6 +9979,12 @@ snapshots:
       semver: 6.3.1
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
+
+  eslint-plugin-turbo@2.5.4(eslint@9.31.0(jiti@1.21.7))(turbo@2.5.4):
+    dependencies:
+      dotenv: 16.0.3
+      eslint: 9.31.0(jiti@1.21.7)
+      turbo: 2.5.4
 
   eslint-scope@5.1.1:
     dependencies:

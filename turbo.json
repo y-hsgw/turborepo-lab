@@ -5,7 +5,14 @@
       "dependsOn": ["^build"],
       "outputs": [".next/**", "!.next/cache/**", "build/**", "dist/**"],
       "env": ["APP_NAME", "NODE_ENV"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        "!README.md",
+        ".env.production.local",
+        ".env.local",
+        ".env.production",
+        ".env"
+      ]
     },
     "check-types": {
       "dependsOn": ["^check-types"],

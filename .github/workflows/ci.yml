@@ -17,6 +17,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Fetch base branch explicitly
+        run: git fetch origin main
+
       - uses: pnpm/action-setup@v3
         with:
           version: 8

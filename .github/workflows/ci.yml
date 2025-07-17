@@ -32,6 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - run: git diff origin/main...HEAD
       - run: pnpm turbo ls --affected
 
       - name: Build

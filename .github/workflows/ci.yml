@@ -32,8 +32,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Build
-        run: pnpm build:ci
-
-      - name: Lint
-        run: pnpm lint
+      - run: pnpm turbo run lint build --affected

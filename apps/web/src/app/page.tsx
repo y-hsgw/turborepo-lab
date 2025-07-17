@@ -9,14 +9,6 @@ export default function Home() {
         <h1>{process.env.NEXT_PUBLIC_TITLE}</h1>
         <h2>アプリ名：{process.env.APP_NAME}</h2>
         <h2>環境：{process.env.NODE_ENV}</h2>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
       </main>
       <div>{add(1, 2)}</div>;
       <footer className={styles.footer}>

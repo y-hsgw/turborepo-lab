@@ -37,6 +37,8 @@ jobs:
 
       - name: Build
         run: pnpm build:ci
+        env:
+          TURBO_SCM_BASE: origin/main
 
       - name: Lint
         run: pnpm lint

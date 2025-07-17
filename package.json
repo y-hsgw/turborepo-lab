@@ -9,7 +9,7 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "build": "turbo run build --summarize",
-    "build:ci": "turbo run build --affected",
+    "build:ci": "turbo run build --filter=...[main...HEAD]",
     "check-types": "turbo run check-types"
   },
   "repository": {

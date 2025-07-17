@@ -7,7 +7,7 @@
   "scripts": {
     "turbo": "turbo",
     "dev": "turbo run dev",
-    "lint": "turbo run lint",
+    "lint": "turbo run lint --affected",
     "build": "turbo run build --summarize",
     "build:ci": "turbo run build --affected",
     "check-types": "turbo run check-types"

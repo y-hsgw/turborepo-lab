@@ -10,6 +10,8 @@ jobs:
     name: Build and Lint
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    env:
+      TURBO_SCM_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
 
     steps:
       - name: Check out code
@@ -31,7 +33,7 @@ jobs:
         run: pnpm install
 
       - name: Build
-        run: pnpm build
+        run: pnpm build:ci
 
       - name: Lint
         run: pnpm lint

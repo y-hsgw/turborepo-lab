@@ -17,8 +17,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Fetch base branch explicitly
-        run: git fetch origin main
+      - name: Debug git refs
+        run: |
+          git branch -a
+          git log -1 origin/main
 
       - uses: pnpm/action-setup@v3
         with:

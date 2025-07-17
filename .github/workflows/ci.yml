@@ -32,6 +32,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - run: pnpm turbo ls --affected
+
       - name: Build
         run: pnpm build:ci
 

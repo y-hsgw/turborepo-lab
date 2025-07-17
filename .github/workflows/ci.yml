@@ -10,17 +10,14 @@ jobs:
     name: Build and Lint
     timeout-minutes: 15
     runs-on: ubuntu-latest
+    env:
+      TURBO_SCM_BASE: ${{ github.event_name == 'pull_request' && github.event.pull_request.base.sha || github.event.before }}
 
     steps:
       - name: Check out code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Debug git refs
-        run: |
-          git branch -a
-          git log -1 origin/main
 
       - uses: pnpm/action-setup@v3
         with:
@@ -37,8 +34,6 @@ jobs:
 
       - name: Build
         run: pnpm build:ci
-        env:
-          TURBO_SCM_BASE: origin/main
 
       - name: Lint
         run: pnpm lint

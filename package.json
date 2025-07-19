@@ -5,6 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
+    "e2e": "turbo run e2e",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "build": "turbo run build --summarize",

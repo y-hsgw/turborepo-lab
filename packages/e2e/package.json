@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "e2e": "playwright test",
+    "e2e:dev": "playwright test",
+    "e2e": "pnpm --filter web start & playwright test",
     "e2e:ui": "pnpm e2e --ui"
+  },
+  "dependencies": {
+    "web": "workspace:*"
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",

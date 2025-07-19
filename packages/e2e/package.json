@@ -12,7 +12,8 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.54.1",
+    "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.16.5",
-    "@repo/typescript-config": "workspace:*"
+    "typescript": "^5.8.3"
   }
 }

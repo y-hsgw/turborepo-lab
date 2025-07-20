@@ -23,7 +23,7 @@ export default function Home() {
           priority
         />
       </main>
-      <div>{add(1, 2)}</div>;
+      <div>{add(1, 2)}</div>
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

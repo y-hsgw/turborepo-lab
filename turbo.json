@@ -27,6 +27,13 @@
     },
     "e2e": {
       "dependsOn": ["^build"]
+    },
+    "test": {
+      "dependsOn": ["^test"]
+    },
+    "test:watch": {
+      "cache": false,
+      "persistent": true
     }
   }
 }

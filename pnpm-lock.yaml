@@ -128,6 +128,9 @@ importers:
       '@repo/vitest-config':
         specifier: workspace:*
         version: link:../vitest-config
+      '@vitest/coverage-istanbul':
+        specifier: ^3.2.4
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.15)(jiti@1.21.7)(terser@5.43.1))
       typescript:
         specifier: ^5.8.3
         version: 5.8.3

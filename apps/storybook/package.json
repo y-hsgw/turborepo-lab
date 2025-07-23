@@ -15,8 +15,9 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@repo/typescript-config": "workspace:*",
     "@eslint/eslintrc": "^3",
+    "@repo/typescript-config": "workspace:*",
+    "@storybook/addon-docs": "^9.0.18",
     "@storybook/nextjs": "^9.0.18",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",

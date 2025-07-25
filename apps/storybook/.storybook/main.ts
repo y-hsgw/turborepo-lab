@@ -17,7 +17,7 @@ const config: StorybookConfig = {
       url: "http://localhost:7008",
     },
   },
-  addons: ["@storybook/addon-docs", "@storybook/addon-onboarding"],
+  addons: ["@storybook/addon-docs"],
   framework: {
     name: getAbsolutePath("@storybook/nextjs"),
     options: {},

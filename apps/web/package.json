@@ -11,7 +11,8 @@
     "lint": "next lint",
     "check-types": "tsc --noEmit",
     "storybook": "storybook dev -p 7007",
-    "build-storybook": "storybook build"
+    "storybook:build": "storybook build",
+    "storybook:serve": "pnpm dlx http-server ./storybook-static -p 7007"
   },
   "dependencies": {
     "@repo/math": "workspace:*",

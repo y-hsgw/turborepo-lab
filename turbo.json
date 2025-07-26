@@ -34,6 +34,14 @@
     "test:watch": {
       "cache": false,
       "persistent": true
+    },
+    "storybook:build": {
+      "dependsOn": ["^storybook:build"],
+      "outputs": ["storybook-static/**"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
+    },
+    "storybook:serve": {
+      "dependsOn": ["storybook:build"]
     }
   }
 }

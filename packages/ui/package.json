@@ -9,7 +9,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 7008",
-    "build-storybook": "storybook build",
+    "storybook:build": "storybook build",
+    "storybook:serve": "pnpm dlx http-server ./storybook-static -p 7008",
     "check-types": "tsc --noEmit"
   },
   "keywords": [],

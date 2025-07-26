@@ -7,7 +7,10 @@
   "scripts": {
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "screenshot:web": "storycap http://localhost:7007 -o __screenshots__/web",
+    "screenshot:ui": "storycap http://localhost:7008 -o __screenshots__/ui",
+    "screenshot": "pnpm screenshot:web & pnpm screenshot:ui"
   },
   "dependencies": {
     "next": "15.4.2",

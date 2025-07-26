@@ -14,6 +14,7 @@
     "build-storybook": "storybook build",
     "screenshot:web": "pnpm dlx wait-on $npm_package_config_web_storybook_url && storycap $npm_package_config_web_storybook_url -o __screenshots__/web",
     "screenshot:ui": "pnpm dlx wait-on $npm_package_config_ui_storybook_url && storycap $npm_package_config_ui_storybook_url -o __screenshots__/ui",
+    "storybook:serve:all": "pnpm -w run storybook:serve",
     "screenshot": "pnpm screenshot:web & pnpm screenshot:ui",
     "reg-suit": "reg-suit run"
   },

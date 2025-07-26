@@ -15,6 +15,10 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+defaults:
+  run:
+    working-directory: ./apps/storybook
+
 jobs:
   VRT:
     runs-on: ubuntu-latest
@@ -50,10 +54,10 @@ jobs:
         run: pnpm install
 
       - name: Serve Storybook
-        run: pnpm storybook:serve &
+        run: pnpm storybook:serve:all &
 
       - name: Run Screenshot
-        run: pnpm --filter storybook run screenshot
+        run: pnpm storybook run screenshot
 
       - name: Run reg-suit
-        run: pnpm --filter storybook run reg-suit
+        run: pnpm storybook run reg-suit

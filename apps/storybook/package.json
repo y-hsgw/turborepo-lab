@@ -33,6 +33,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.2",
     "eslint-plugin-storybook": "^9.0.18",
+    "reg-suit": "^0.14.4",
     "storybook": "^9.0.18",
     "storycap": "^5.0.1",
     "tailwindcss": "^4",

@@ -8,7 +8,7 @@ export const Button = ({
   ...other
 }: ButtonProps): React.ReactElement => {
   return (
-    <button type="button" style={{ backgroundColor: "orange" }} {...other}>
+    <button type="button" style={{ backgroundColor: "blue" }} {...other}>
       {children}
     </button>
   );

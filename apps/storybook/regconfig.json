@@ -13,6 +13,7 @@
     "reg-notify-github-plugin": {
       "prComment": true,
       "prCommentBehavior": "default",
+      "shortDescription": true,
       "clientId": "MzQwNDc2M7A0N9UvKS1Kyi9KLcjXzUlM0jczsTQ0NzUx16/UzShOLwcA"
     },
     "reg-publish-s3-plugin": {

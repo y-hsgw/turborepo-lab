@@ -41,7 +41,8 @@
       "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     },
     "storybook:serve": {
-      "dependsOn": ["storybook:build"]
+      "dependsOn": ["storybook:build"],
+      "cache": false
     }
   }
 }

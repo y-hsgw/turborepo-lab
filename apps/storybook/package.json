@@ -4,12 +4,16 @@
   "private": true,
   "license": "UNLICENSED",
   "type": "module",
+  "config": {
+    "web_storybook_url": "http://localhost:7007",
+    "ui_storybook_url": "http://localhost:7008"
+  },
   "scripts": {
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "screenshot:web": "storycap http://localhost:7007 -o __screenshots__/web",
-    "screenshot:ui": "storycap http://localhost:7008 -o __screenshots__/ui",
+    "screenshot:web": "pnpm dlx wait-on $npm_package_config_web_storybook_url && storycap $npm_package_config_web_storybook_url -o __screenshots__/web",
+    "screenshot:ui": "pnpm dlx wait-on $npm_config_ui_storybook_url && storycap $npm_config_ui_storybook_url -o __screenshots__/ui",
     "screenshot": "pnpm screenshot:web & pnpm screenshot:ui"
   },
   "dependencies": {

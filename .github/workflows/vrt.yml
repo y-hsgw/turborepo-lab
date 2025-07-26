@@ -2,6 +2,11 @@ name: VRT
 
 on:
   pull_request:
+    paths:
+      - "apps/storybook/**"
+      - "apps/web/**"
+      - "packages/ui/**"
+      - ".github/workflows/vrt.yml"
     branches: [main]
   push:
     branches: [main]

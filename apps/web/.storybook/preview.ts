@@ -1,6 +1,8 @@
-import type { Preview } from "@storybook/nextjs";
+import type { Decorator, Preview } from "@storybook/nextjs";
+import { withScreenshot } from "storycap";
 
 const preview: Preview = {
+  decorators: [withScreenshot as Decorator],
   parameters: {
     controls: {
       matchers: {

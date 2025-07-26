@@ -57,7 +57,7 @@ jobs:
         run: pnpm storybook:serve:all &
 
       - name: Run Screenshot
-        run: pnpm storybook run screenshot
+        run: pnpm screenshot
 
       - name: Run reg-suit
-        run: pnpm storybook run reg-suit
+        run: pnpm reg-suit

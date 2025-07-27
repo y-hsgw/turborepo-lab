@@ -40,14 +40,14 @@ jobs:
       - name: Build storybook
         run: pnpm storybook:build
 
-      - name: Build website
-        run: pnpm build --filter=docs
-
       - name: Copy web storybook
         run: cp -r ./apps/web/storybook-static ./apps/docs/static/storybook/web/
 
       - name: Copy ui storybook
         run: cp -r ./packages/ui/storybook-static ./apps/docs/static/storybook/ui/
+
+      - name: Build website
+        run: pnpm build --filter=docs
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3

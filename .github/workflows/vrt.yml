@@ -58,5 +58,9 @@ jobs:
       - name: Run Screenshot
         run: pnpm screenshot
 
+      - name: workaround for detached HEAD
+        run: |
+          git checkout ${GITHUB_REF#refs/heads/} || git checkout -b ${GITHUB_REF#refs/heads/} && git pull
+
       - name: Run reg-suit
         run: pnpm reg-suit

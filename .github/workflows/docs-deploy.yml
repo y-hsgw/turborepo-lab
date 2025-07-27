@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "apps/docs/**"
+      - ".github/workflows/docs-deploy.yml"
     branches:
       - main
 
@@ -11,8 +12,6 @@ jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
-    env:
-      BUILD_DIR: ./apps/docs/build
 
     steps:
       - uses: actions/checkout@v4
@@ -45,15 +44,15 @@ jobs:
         run: pnpm build --filter=docs
 
       - name: Copy web storybook
-        run: cp -r ./apps/web/storybook-static $BUILD_DIR/storybook/web
+        run: cp -r ./apps/web/storybook-static ./apps/docs/static/storybook/web/
 
       - name: Copy ui storybook
-        run: cp -r ./packages/ui/storybook-static $BUILD_DIR/storybook/ui
+        run: cp -r ./packages/ui/storybook-static ./apps/docs/static/storybook/ui/
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.BUILD_DIR }}
+          path: ./apps/docs/build
 
   deploy:
     name: Deploy to GitHub Pages

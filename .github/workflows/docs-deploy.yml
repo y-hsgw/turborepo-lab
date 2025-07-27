@@ -41,7 +41,7 @@ jobs:
         run: pnpm storybook:build
 
       - name: Copy web storybook
-        run: cp -r apps/web/storybook-static apps/docs/static/storybook/
+        run: cp -r apps/web/storybook-static apps/docs/static/storybook/web/
 
       - name: Copy ui storybook
         run: cp -r packages/ui/storybook-static apps/docs/static/storybook/ui/

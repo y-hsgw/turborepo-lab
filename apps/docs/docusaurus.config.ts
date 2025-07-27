@@ -87,6 +87,15 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
+          label: "Storybook",
+          position: "left",
+          items: [
+            { label: "web", target: "_blank", href: "/storybook/web/" },
+            { label: "ui", target: "_blank", href: "/storybook/ui/" },
+          ],
+        },
+
+        {
           href: "https://github.com/facebook/docusaurus",
           label: "GitHub",
           position: "right",

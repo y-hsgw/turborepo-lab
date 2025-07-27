@@ -11,9 +11,8 @@ jobs:
   build:
     name: Build Docusaurus
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./apps/docs
+    env:
+      BUILD_DIR: ./apps/docs/build
 
     steps:
       - uses: actions/checkout@v4
@@ -21,6 +20,14 @@ jobs:
           fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
+
+      - name: Cache turbo build setup
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-turbo-
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
@@ -31,13 +38,22 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Build storybook
+        run: pnpm storybook:build
+
       - name: Build website
-        run: pnpm build
+        run: pnpm build --filter=docs
+
+      - name: Copy web storybook
+        run: cp -r ./apps/web/storybook-static $BUILD_DIR/storybook/web
+
+      - name: Copy ui storybook
+        run: cp -r ./packages/ui/storybook-static $BUILD_DIR/storybook/ui
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./apps/docs/build
+          path: ${{ env.BUILD_DIR }}
 
   deploy:
     name: Deploy to GitHub Pages

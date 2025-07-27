@@ -13,6 +13,7 @@
     "build": "turbo run build --summarize",
     "build:ci": "turbo run build --affected",
     "check-types": "turbo run check-types",
+    "storybook:build": "turbo run storybook:build",
     "storybook:serve": "turbo run storybook:serve"
   },
   "repository": {

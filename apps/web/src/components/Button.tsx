@@ -1,4 +1,4 @@
-import "./button.css";
+import "./button.scss";
 
 export interface ButtonProps {
   /** Is this the principal call to action on the page? */
@@ -28,7 +28,7 @@ export const Button = ({
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
-        " "
+        " ",
       )}
       {...props}
     >

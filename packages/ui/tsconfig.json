@@ -1,10 +1,7 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
-    "incremental": true,
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "incremental": true
   },
   "include": ["**/*.ts", "**/*.tsx", ".storybook/*.ts", ".storybook/*.tsx"]
 }

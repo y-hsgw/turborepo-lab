@@ -4,8 +4,15 @@
   "description": "",
   "private": true,
   "exports": {
-    "./button": "./src/button.tsx",
+    "./components/*": "./src/components/*.tsx",
     "./styles/variables": "./src/styles/variables/*.scss"
+  },
+  "imports": {
+    "#*": [
+      "./src/*",
+      "./src/*.ts",
+      "./src/*.tsx"
+    ]
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,5 +1,5 @@
 import { Button } from "./Button";
-import "./header.scss";
+import "./header.module.scss";
 
 type User = {
   name: string;

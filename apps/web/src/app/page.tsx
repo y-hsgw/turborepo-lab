@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { add } from "@repo/math/add";
 import { type Metadata } from "next";
+import { Button } from "@/components/Button";
 
 export const metadata: Metadata = {
   title: "トップページ",
@@ -24,6 +25,7 @@ export default function Home() {
         />
       </main>
       <div>{add(1, 2)}</div>
+      <Button label="テストボタン" primary />
       <footer className={styles.footer}>
         <a
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

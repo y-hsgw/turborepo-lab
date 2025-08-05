@@ -1,9 +1,11 @@
+@use "@repo/ui/styles/variables/size";
+
 .storybook-button {
   display: inline-block;
   cursor: pointer;
   border: 0;
   border-radius: 3em;
-  font-weight: 700;
+  font-weight: size.$font-weight-bold;
   line-height: 1;
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

@@ -1,3 +1,5 @@
+@use "@repo/ui/styles/variables/size";
+
 .storybook-header {
   display: flex;
   justify-content: space-between;
@@ -15,7 +17,7 @@
     display: inline-block;
     vertical-align: top;
     margin: 6px 0 6px 10px;
-    font-weight: 700;
+    font-weight: size.$font-weight-bold;
     font-size: 20px;
     line-height: 1;
   }

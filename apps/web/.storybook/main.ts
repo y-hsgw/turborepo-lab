@@ -1,6 +1,6 @@
 import type { StorybookConfig } from "@storybook/nextjs";
 
-import { join, dirname } from "node:path";
+import path, { join, dirname } from "node:path";
 
 function getAbsolutePath(value: string): any {
   return dirname(require.resolve(join(value, "package.json")));
@@ -10,7 +10,9 @@ const config: StorybookConfig = {
   addons: ["storycap"],
   framework: {
     name: getAbsolutePath("@storybook/nextjs"),
-    options: {},
+    options: {
+      nextConfigPath: path.resolve(__dirname, "../next.config.ts"),
+    },
   },
   features: {
     experimentalRSC: true,

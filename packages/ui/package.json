@@ -5,6 +5,7 @@
   "private": true,
   "exports": {
     "./components/*": "./src/components/*.tsx",
+    "./configs/*": "./src/configs/*.ts",
     "./styles/variables/*": "./src/styles/variables/*.scss"
   },
   "imports": {
@@ -15,7 +16,6 @@
     ]
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 7008",
     "storybook:build": "storybook build",
     "storybook:serve": "pnpm dlx http-server ./storybook-static -p 7008",

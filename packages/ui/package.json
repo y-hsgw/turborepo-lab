@@ -27,9 +27,7 @@
   "type": "module",
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@storybook/addon-webpack5-compiler-swc": "^3.0.0",
     "@storybook/nextjs": "^9.0.18",
-    "@storybook/react-webpack5": "^9.0.18",
     "@types/node": "^24.1.0",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",

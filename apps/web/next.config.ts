@@ -1,3 +1,4 @@
+import { additionalData } from "@repo/ui/configs/scss-additional-data";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
@@ -6,7 +7,7 @@ const nextConfig: NextConfig = {
   },
   output: "standalone",
   sassOptions: {
-    additionalData: '@use "@repo/ui/styles/variables/size";',
+    additionalData: additionalData,
   },
 };
 

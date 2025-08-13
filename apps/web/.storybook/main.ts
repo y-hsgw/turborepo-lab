@@ -11,6 +11,9 @@ const config: StorybookConfig = {
   framework: {
     name: getAbsolutePath("@storybook/nextjs"),
     options: {
+      image: {
+        loading: "eager",
+      },
       nextConfigPath: path.resolve(__dirname, "../next.config.ts"),
     },
   },

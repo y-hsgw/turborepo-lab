@@ -13,7 +13,8 @@
     "storybook": "storybook dev -p 7007",
     "storybook:build": "storybook build",
     "storybook:serve": "pnpm dlx http-server ./storybook-static -p 7007",
-    "test": "vitest --configLoader runner"
+    "test": "vitest --configLoader runner",
+    "math": "math"
   },
   "dependencies": {
     "@repo/math": "workspace:*",

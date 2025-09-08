@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { add } from "@repo/math/add";
 import { type Metadata } from "next";
 import { Button } from "@repo/ui/components/Button";
+import nextLogo from "@/assets/next.svg?url";
 
 export const metadata: Metadata = {
   title: "トップページ",
@@ -17,7 +18,7 @@ export default function Home() {
         <h2>環境：{process.env.NODE_ENV}</h2>
         <Image
           className={styles.logo}
-          src="/next.svg"
+          src={nextLogo}
           alt="Next.js logo"
           width={180}
           height={38}

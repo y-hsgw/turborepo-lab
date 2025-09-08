@@ -6,6 +6,10 @@
   "exports": {
     "./components/*": "./src/components/*.tsx",
     "./configs/*": "./src/configs/*.ts",
+    "./types/*": [
+      "./src/types/*.ts",
+      "./src/types/*.d.ts"
+    ],
     "./styles/variables/*": "./src/styles/variables/*.scss"
   },
   "imports": {
